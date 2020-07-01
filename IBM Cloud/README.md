@@ -12,7 +12,7 @@ The demonstration architecture includes compute, networks, storage, and security
 ### Components Review
 
 Component | Description | IBM Service | Provider Resource 
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+--- | --- | --- | ---   
 [VSI](https://cloud.ibm.com/docs/vsi/vsi_index.html#getting-started-tutorial) | Virtual server instance. One or more virtual servers deployed as multi-tenant instances into two availability zones. | Public VSI | ibm_compute_vm_instance 
 [File storage](https://cloud.ibm.com/docs/FileStorage/index.html#getting-started-with-file-storage) | Two instances deployed as a common storage services for the virtual servers in that zone. | File Storage | ibm_store_file
 [Security group](https://cloud.ibm.com/docs/vsi/vsi_index.html#getting-started-tutorial) | Two groups. One group with policies for the virtual servers attached to the public network that allows limited messages on that network. A second group with policies for all virtual servers to limit communications between virtual servers on the private network. | Security Group | ibm_security_group ibm_security_group_rule
