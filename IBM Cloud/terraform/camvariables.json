@@ -109,7 +109,7 @@
             "hidden": false,
             "label": "Private VLAN",
             "secured": false,
-            "required": false,
+            "required": true,
             "immutable": false,
             "default": "lon-public-vlan"
         },
@@ -120,7 +120,7 @@
             "hidden": false,
             "label": "Public VLAN",
             "secured": false,
-            "required": false,
+            "required": true,
             "immutable": false,
             "default": "lon-public-vlan"
         },
@@ -131,7 +131,7 @@
             "hidden": false,
             "label": "Operating System reference code",
             "secured": false,
-            "required": false,
+            "required": true,
             "immutable": false,
             "default": "DEBIAN_8_64"
         },
@@ -142,7 +142,7 @@
             "hidden": false,
             "label": "Number of VMs",
             "secured": false,
-            "required": false,
+            "required": true,
             "immutable": false,
             "default": "1"
         },
