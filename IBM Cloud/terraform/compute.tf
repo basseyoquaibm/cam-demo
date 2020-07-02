@@ -37,7 +37,7 @@ resource "ibm_compute_vm_instance" "compute_instances2" {
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("virtualserver-private-%02d", count.index + 1)}"
   domain = "${var.domain}"
-  datacenter = "${var.dataceneter}"
+  datacenter = "${var.datacenter}"
   file_storage_ids = ["${ibm_storage_file.storage2.id}"]
   network_speed = 10
   cores = 1
@@ -46,5 +46,5 @@ resource "ibm_compute_vm_instance" "compute_instances2" {
   ssh_key_ids = ["${ibm_compute_ssh_key.ssh_key.id}"]
   private_security_group_ids = ["${ibm_security_group.sg2.id}"]
   local_disk = false
-  private_vlan_id = "${var.privatevlanid}"
+  private_vlan_id = "${data.ibm_network_vlan.public_vlan.id}"
 }

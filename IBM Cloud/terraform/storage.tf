@@ -7,7 +7,7 @@
 #Docs: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#storage-file
 resource "ibm_storage_file" "storage1" {
   type = "Performance"
-  datacenter = "${var.dataceneter}"
+  datacenter = "${var.datacenter}"
   capacity = "20"
   iops = "100"
 }
