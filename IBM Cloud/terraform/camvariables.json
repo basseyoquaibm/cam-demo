@@ -1,0 +1,172 @@
+{
+    "terraform_version": "~> 0.11.0",
+    "template_input_params": [
+        {
+            "description": "Public SSH key used to connect to the virtual guest",
+            "hidden": false,
+            "immutable": false,
+            "label": "Public SSH Key",
+            "name": "ssh_key",
+            "required": true,
+            "secured": false,
+            "type": "string",
+            "regex": "^ssh-rsa AAAA[0-9A-Za-z+/]+[=]{0,3}( [^@]+@[^@]+| [^@]+){0,1}$"
+        },
+        {
+            "description": "Label for the Public SSH key",
+            "hidden": false,
+            "immutable": false,
+            "label": "Public SSH Key Label",
+            "name": "ssh_label",
+            "required": true,
+            "secured": false,
+            "type": "string"
+        },
+        {
+            "description": "IBM Cloud datacenter where infrastructure resources will be deployed",
+            "hidden": false,
+            "immutable": false,
+            "label": "IBM Cloud Data Center",
+            "name": "datacenter",
+            "required": true,
+            "secured": false,
+            "type": "string",            
+            "options": [
+                {
+                    "value" : "lon02",
+                    "label": "London, England",
+                    "default": "true"
+                },
+                {
+                    "value" : "ams01",
+                    "label": "Amsterdam 01, The Netherlands"
+                },            
+                {
+                    "value" : "dal05",
+                    "label": "Dallas 05, USA"
+                },
+                {
+                    "value" : "dal06",
+                    "label": "Dallas 06, USA"
+                },
+                {
+                    "value" : "fra02",
+                    "label": "Frankfurt, Germany"
+                },
+                {
+                    "value" : "mel01",
+                    "label": "Melbourne, Australia"
+                },
+                {
+                    "value" : "mex01",
+                    "label": "Querétaro, Mexico"
+                },
+                {
+                    "value" : "sjc01",
+                    "label": "San Jose 01, USA"
+                },
+                {
+                    "value" : "sao01",
+                    "label": "Sao Paulo, Brazil"
+                },
+                {
+                    "value" : "seo01",
+                    "label": "Seoul 01, Korea"
+                },
+                {
+                    "value" : "tok02",
+                    "label": "Tokyo, Japan"
+                }
+            ]
+        },
+        {
+            "name": "ibm_region",
+            "type": "string",
+            "description": "IBM Cloud region.",
+            "hidden": false,
+            "label": "IBM Cloud Region",
+            "secured": false,
+            "required": true,
+            "immutable": false,
+            "options": [
+                {
+                    "value": "eu-gb",
+                    "label": "United Kingdom",
+                    "default": "true"
+                },
+                {
+                    "value": "us-south",
+                    "label": "US South"
+                },
+                {
+                    "value": "us-east",
+                    "label": "US East"
+                },
+                {
+                    "value": "au-syd",
+                    "label": "Sydney"
+                },
+                {
+                    "value": "eu-de",
+                    "label": "Germany"
+                }
+            ]
+        },     
+        {
+            "name": "domain",           
+            "description": "Domain of the virtual instance to be deployed",
+            "hidden": false,
+            "immutable": false,
+            "label": "VM Domain",   
+            "required": true,
+            "secured": false,
+            "type": "string",
+            "default": "sample.com"
+        },        
+        {
+            "name": "private_vlan_name",
+            "type": "string",
+            "description": "Private Virtual network for deployed virtual instances",
+            "hidden": false,
+            "label": "Private VLAN",
+            "secured": false,
+            "required": false,
+            "immutable": false,
+            "default": "lon-public-vlan"
+        },
+        {
+            "name": "public_vlan_name",
+            "type": "string",
+            "description": "Public Virtual network for deployed virtual instances",
+            "hidden": false,
+            "label": "Public VLAN",
+            "secured": false,
+            "required": false,
+            "immutable": false,
+            "default": "lon-public-vlan"
+        },
+        {
+            "name": "osrefcode",
+            "type": "string",
+            "description": "Operating system reference code for VMs",
+            "hidden": false,
+            "label": "Operating System reference code",
+            "secured": false,
+            "required": false,
+            "immutable": false,
+            "default": "DEBIAN_8_64"
+        },
+        {
+            "name": "compute_count",
+            "type": "string",
+            "description": "Number of virtual instances for each type",
+            "hidden": false,
+            "label": "Number of VMs",
+            "secured": false,
+            "required": false,
+            "immutable": false,
+            "default": "1"
+        }
+    ]
+  }
+  

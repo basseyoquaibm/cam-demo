@@ -38,12 +38,12 @@ variable public_vlan_name {
 
 variable datacenter {
   description = "location to deploy"
-  default = "lon02"
+  default = ""
 }
 
 variable ibm_region {
   description = "IBM Cloud region"
-  default = "eu-gb"
+  default = ""
 }
 
 # The specific virtual server configuration items
@@ -54,7 +54,7 @@ variable osrefcode {
 }
 variable domain {
   description = "domain of the VMs"
-  default = "mybluemix.com"
+  default = ""
 }
 
 # The number of each type of virtual server that

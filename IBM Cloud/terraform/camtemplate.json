@@ -1,0 +1,37 @@
+{
+    "name": "IBM Cloud Demo Template",
+    "description": "Deploy IBM Cloud Infastructure with IBM Cloud Automation Manager",
+    "version": "1.0",
+    "type": "Demo Templates",
+    "manifest": {
+      "template_type": "Terraform",
+      "template_format": "HCL",
+      "template_provider": "IBM",
+      "template": {
+        "templateData": "",
+        "templateVariables": "",
+        "templateOutput": ""
+      },
+      "template_source": {
+        "githubRepoUrl": "",
+        "githubAccessToken": "",
+        "relativePathToTemplateFolder": "",
+        "templateFileName": "main.tf"
+      }
+    },
+    "metadata": {
+        "displayName": "IBM Cloud Demo Template",
+        "providerDisplayName": "IBM",
+        "longDescription": "Deploy IBM Cloud Infastructure with IBM Cloud Automation Manager",
+        "bullets": [
+          {
+            "title": "Clouds",
+            "description": "IBM Cloud"
+          },
+          {
+            "title": "Usage and Special Notices",
+            "description": "<a href=\"https://github.com/basseyoquaibm/cam-demo/tree/master/IBM%20Cloud\">See Usage Documentation</a>"
+          }
+        ]       
+      }     
+    }
