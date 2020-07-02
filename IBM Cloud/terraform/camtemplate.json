@@ -29,8 +29,16 @@
             "description": "IBM Cloud"
           },
           {
+            "title": "Topology",
+            "description": "IBM Cloud: 1 virtual machine of each type"
+          },
+          {
+            "title": "Default virtual machine settings",
+            "description": "<ul><li>IBM Cloud:<ul style=\"margin-left: 20px;\"><li>Flavor: Cores = 1, Memory = 1GB, Storage = 25GB SAN</li><li>Network: Private IP - Computed, Public IP - Computed</li></ul></li></ul>"
+          },
+          {
             "title": "Usage and Special Notices",
-            "description": "<a href=\"https://github.com/basseyoquaibm/cam-demo/tree/master/IBM%20Cloud\">See Usage Documentation</a>"
+            "description": "<a href=\"https://github.com/basseyoquaibm/cam-demo/tree/master/IBM%20Cloud\" target=\"_blank\">See Usage Documentation</a>"
           }
         ]       
       }     
