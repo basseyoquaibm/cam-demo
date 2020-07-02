@@ -6,17 +6,17 @@
 # - with an OS, domain, sshkey, vlans defined by variable
 # - to a region/availabiltiy zone defined by variable
 # - linked to a single file storage
-# - assigned a security gtroup policy
+# - assigned a security group policy
 
 
 #Create multiple virtual servers on public/private networks
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#vm
 resource "ibm_compute_vm_instance" "compute_instances1" {
   count = "${var.compute_count}"
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("virtualserver-publicprivate-%02d", count.index + 1)}"
   domain = "${var.domain}"
-  datacenter = "${var.availability_zone}"
+  datacenter = "${var.datacenter}"
   file_storage_ids = ["${ibm_storage_file.storage1.id}"]
   network_speed = 10
   cores = 1
@@ -26,18 +26,18 @@ resource "ibm_compute_vm_instance" "compute_instances1" {
   local_disk = false
   private_security_group_ids = ["${ibm_security_group.sg2.id}"]
   public_security_group_ids = ["${ibm_security_group.sg1.id}"]
-  private_vlan_id = "${var.privatevlanid}"
-  public_vlan_id = "${var.publicvlanid}"
+  private_vlan_id = "${data.ibm_network_vlan.private_vlan.id}"
+  public_vlan_id = "${data.ibm_network_vlan.public_vlan.id}" 
 }
 
 #Create multiple virtual srevers on private network
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#vm
 resource "ibm_compute_vm_instance" "compute_instances2" {
   count = "${var.compute_count}"
   os_reference_code = "${var.osrefcode}"
   hostname = "${format("virtualserver-private-%02d", count.index + 1)}"
   domain = "${var.domain}"
-  datacenter = "${var.availability_zone}"
+  datacenter = "${var.dataceneter}"
   file_storage_ids = ["${ibm_storage_file.storage2.id}"]
   network_speed = 10
   cores = 1

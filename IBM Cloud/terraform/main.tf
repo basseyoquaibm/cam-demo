@@ -1,12 +1,16 @@
 
 #This terraform file defines the terraform provider that will be used
 #to deploy this architecture. In this case, the IBM Cloud provider is
-#the only provider that will be used. The two variables provide the
-#means to deploy workloads. However, the APIkey and ibmid must have
-#the permissions to deploy this archiecture's resources.
+#the only provider that will be used. The terraform version required is 
+#also defined
 
+
+#Docs: https://cloud.ibm.com/docs/terraform?topic=terraform-provider-reference
 provider "ibm" {
-  softlayer_username = "${var.iaasusername}"
-  softlayer_api_key  = "${var.iaasapikey}"
-  region             = "${var.ibm_region}"
+  region = "${var.ibm_region}"
+}
+
+#Doc: https://www.terraform.io/docs/configuration/terraform.html
+terraform {
+  required_version = ">= 0.12"
 }

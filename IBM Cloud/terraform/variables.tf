@@ -2,17 +2,6 @@
 #this architecture. Default values will be used unless changed at 
 #deployment time.
 
-#  The credentials needed to deploy all resources. 
-# Ensure the user/apikey have proper permissions.
-
-variable iaasapikey {
-  description = "iaas api key"
-  default = ""
-}
-variable iaasusername {
-  description = "iaas user name"
-  default = ""
-}
 
 # The actual public key that will be created in IBM Cloud and
 # assigned to the virtual servers
@@ -33,29 +22,28 @@ variable ssh_notes {
 
 
 # Pre-existing VLANs. They are deployed using a ticket request.
-# The VLAN ID can be obtained by accessing the VLAN and selected
-# from the URL.
+# The VLAN Name can be obtained from the Network section of the IBM Cloud Classic Infastructure Dashboard
 
-variable privatevlanid {
+
+variable private_vlan_name {
   description = "private VLAN"
   default = ""
 }
-variable publicvlanid {
+variable public_vlan_name {
   description = "public VLAN"
   default = ""
 }
 
-#The zone and region to deploy the architecture. The tutorial uses a 
-#single zone. 
+#The datacenter and region to deploy the architecture. 
 
-variable availability_zone {
+variable datacenter {
   description = "location to deploy"
-  default = ""
+  default = "lon02"
 }
 
 variable ibm_region {
   description = "IBM Cloud region"
-  default = ""
+  default = "eu-gb"
 }
 
 # The specific virtual server configuration items

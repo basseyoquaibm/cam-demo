@@ -5,14 +5,14 @@
 #servers during deployment - using the compute.tf file.
 
 # Create a security group to limit communications on the public network 
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#sec-group
 resource "ibm_security_group" "sg1" {
     name = "sg1"
     description = "public app traffic"
 }
 
 # Create a rule to limit traffic to https on public network
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#sec-group-rule
 resource "ibm_security_group_rule" "port_443" {
     direction = "ingress"
     ether_type = "IPv4"
@@ -25,14 +25,14 @@ resource "ibm_security_group_rule" "port_443" {
 }
 
 # Create a security group to limit communications on private network
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#sec-group
 resource "ibm_security_group" "sg2" {
     name = "sg2"
     description = "private app traffic"
 }
 
 #Create a rule to limit traffic to ssh on private network
-
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#sec-group-rule
 resource "ibm_security_group_rule" "port_22" {
     direction = "ingress"
     ether_type = "IPv4"

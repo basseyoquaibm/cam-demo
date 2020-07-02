@@ -1,8 +1,8 @@
 #This terraform file creates an ssh key that will be
 #used to asssign an SSH key for each of the virtual 
-#servers. Pre-existing SSH keys may also be assigned
-#using their ID in lieu of the actual key
+#servers. 
 
+#Doc: https://cloud.ibm.com/docs/terraform?topic=terraform-infrastructure-resources#ssh-key
 resource "ibm_compute_ssh_key" "ssh_key" {
   label = "${var.ssh_label}"
   notes = "${var.ssh_notes}"
