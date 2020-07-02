@@ -1,27 +1,6 @@
 {
     "terraform_version": "~> 0.11.0",
-    "template_input_params": [
-        {
-            "description": "Public SSH key used to connect to the virtual guest",
-            "hidden": false,
-            "immutable": false,
-            "label": "Public SSH Key",
-            "name": "ssh_key",
-            "required": true,
-            "secured": false,
-            "type": "string",
-            "regex": "^ssh-rsa AAAA[0-9A-Za-z+/]+[=]{0,3}( [^@]+@[^@]+| [^@]+){0,1}$"
-        },
-        {
-            "description": "Label for the Public SSH key",
-            "hidden": false,
-            "immutable": false,
-            "label": "Public SSH Key Label",
-            "name": "ssh_label",
-            "required": true,
-            "secured": false,
-            "type": "string"
-        },
+    "template_input_params": [        
         {
             "description": "IBM Cloud datacenter where infrastructure resources will be deployed",
             "hidden": false,
@@ -166,6 +145,27 @@
             "required": false,
             "immutable": false,
             "default": "1"
+        },
+        {
+            "description": "Public SSH key used to connect to the virtual guest",
+            "hidden": false,
+            "immutable": false,
+            "label": "Public SSH Key",
+            "name": "ssh_key",
+            "required": true,
+            "secured": false,
+            "type": "string",
+            "regex": "^ssh-rsa AAAA[0-9A-Za-z+/]+[=]{0,3}( [^@]+@[^@]+| [^@]+){0,1}$"
+        },
+        {
+            "description": "Label for the Public SSH key",
+            "hidden": false,
+            "immutable": false,
+            "label": "Public SSH Key Label",
+            "name": "ssh_label",
+            "required": true,
+            "secured": false,
+            "type": "string"
         }
     ]
   }
