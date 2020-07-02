@@ -47,4 +47,5 @@ resource "ibm_compute_vm_instance" "compute_instances2" {
   private_security_group_ids = ["${ibm_security_group.sg2.id}"]
   local_disk = false
   private_vlan_id = "${data.ibm_network_vlan.private_vlan.id}"
+  private_network_only = true
 }
