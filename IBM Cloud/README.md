@@ -14,7 +14,7 @@ The demonstration architecture includes compute, networks, storage, and security
 Component | Description | IBM Service | Provider Resource 
 --- | --- | --- | ---   
 [VSI](https://cloud.ibm.com/docs/vsi/vsi_index.html#getting-started-tutorial) | Virtual server instance. One or more virtual servers deployed as multi-tenant instances into two availability zones. | Public VSI | ibm_compute_vm_instance 
-[File storage](https://cloud.ibm.com/docs/FileStorage/index.html#getting-started-with-file-storage) | Two instances deployed as a common storage services for the virtual servers in that zone. | File Storage | ibm_store_file
+[File storage](https://cloud.ibm.com/docs/FileStorage/index.html#getting-started-with-file-storage) | Two instances deployed as a common storage services for the virtual servers in that zone. | File Storage | ibm_storage_file
 [Security group](https://cloud.ibm.com/docs/vsi/vsi_index.html#getting-started-tutorial) | Two groups. One group with policies for the virtual servers attached to the public network that allows limited messages on that network. A second group with policies for all virtual servers to limit communications between virtual servers on the private network. | Security Group | ibm_security_group ibm_security_group_rule
 [VLAN](https://cloud.ibm.com/docs/vsi/vsi_index.html#getting-started-tutorial) | Virtual Local Area Network. Public allows communications to the public internet. Private limits communications between the virtual servers and resources on that network. | Public or Private VLAN | ibm_network_vlan
 [Zone](https://cloud.ibm.com/docs/overview?topic=overview-locations&locale=en) | A physical area of a region that supports high availability. | IBM Cloud Availability Zone | e.g us-south-1, us-south-2
