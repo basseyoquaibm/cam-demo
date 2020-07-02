@@ -46,5 +46,5 @@ resource "ibm_compute_vm_instance" "compute_instances2" {
   ssh_key_ids = ["${ibm_compute_ssh_key.ssh_key.id}"]
   private_security_group_ids = ["${ibm_security_group.sg2.id}"]
   local_disk = false
-  private_vlan_id = "${data.ibm_network_vlan.public_vlan.id}"
+  private_vlan_id = "${data.ibm_network_vlan.private_vlan.id}"
 }
