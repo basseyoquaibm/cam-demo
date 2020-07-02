@@ -111,7 +111,7 @@
             "secured": false,
             "required": true,
             "immutable": false,
-            "default": "lon-public-vlan"
+            "default": "lon-private-vlan"
         },
         {
             "name": "public_vlan_name",
