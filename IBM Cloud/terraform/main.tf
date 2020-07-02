@@ -12,5 +12,5 @@ provider "ibm" {
 
 #Doc: https://www.terraform.io/docs/configuration/terraform.html
 terraform {
-  required_version = ">= 0.12"
+  //required_version = ">= 0.12"
 }
